@@ -6,7 +6,7 @@ docker container prune -f
 docker image prune -f
 
 # don't worry about this IF statement, it's for cross compiling images
-if [ "$BUILDX" = "1" ]; then
+if [ "$PUSH" = "1" ]; then
   docker build --push --tag rogueraptor7/kali:latest . 
 fi
 
